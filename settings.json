@@ -1,0 +1,24 @@
+{
+    "activity": {
+        "send": "",
+        "list": [],
+        "status": {
+            "online": {
+                "text": "オンライン",
+                "color": "#3ba55d"
+            },
+            "dnd": {
+                "text": "取り込み中",
+                "color": "#ed4245"
+            },
+            "idle": {
+                "text": "退席中",
+                "color": "#faa81a"
+            },
+            "offline": {
+                "text": "オフライン",
+                "color": "#727d8a"
+            }
+        }
+    }
+}
