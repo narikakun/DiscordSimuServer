@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client({
-    ws: { intents: ["GUILDS", "GUILD_MESSAGES","GUILD_MESSAGES","GUILD_MEMBERS", "GUILD_PRESENCES"] },
+    ws: { intents: ["GUILDS","GUILD_MESSAGES","GUILD_MEMBERS", "GUILD_PRESENCES"] },
 });
 const fs = require("fs");
 const config = require("./config.json");
