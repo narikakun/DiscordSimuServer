@@ -42,7 +42,7 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
 client.on("message", async (msg) => {
     try {
         if (msg.author.bot) return;
-        if (msg.channel.id !== "871105737147965510") return;
+        if (msg.channel.id !== "874144489793536032") return;
         if (msg.content.includes("松本") || msg.content.includes("まつもと") || msg.content.includes("マツモト")) {
             msg.channel.send(`松本を検知しました！`, {
                 embed: {
