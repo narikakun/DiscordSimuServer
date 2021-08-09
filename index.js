@@ -58,7 +58,8 @@ client.on("message", async (msg) => {
                     ],
                     footer: {
                         text: "MatsumotoChecker"
-                    }
+                    },
+                    timestamp: new Date()
                 }
             })
         }
