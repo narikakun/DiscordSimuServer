@@ -73,7 +73,9 @@ client.on("messageDelete", async (msg) => {
         if (!msg.embeds[0]) return;
         if (!msg.embeds[0].footer) return;
         if (msg.embeds[0].footer.text !== "MatsumotoChecker") return;
-        msg.channel.send(msg);
+        msg.channel.send(`メッセージが削除されたので再度生成しました。`, {
+            embed: embed
+        });
     } catch (err) {
         console.error(err);
     }
