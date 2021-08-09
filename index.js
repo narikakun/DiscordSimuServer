@@ -38,3 +38,43 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
         console.error(err);
     }
 });
+
+client.on("message", async (msg) => {
+    try {
+        if (msg.author.bot) return;
+        if (msg.channel.id !== "871105737147965510") return;
+        if (msg.content.includes("松本") || msg.content.includes("まつもと") || msg.content.includes("マツモト")) {
+            msg.channel.send(`<@390393475784245248> 松本を検知しました！`, {
+                embed: {
+                    author: {
+                        name: "松本チェッカー"
+                    },
+                    description: "```\n" + msg.content + "\n```",
+                    fields: [
+                        {
+                            name: "投稿者",
+                            value: msg.author.tag
+                        }
+                    ],
+                    footer: {
+                        text: "MatsumotoChecker"
+                    }
+                }
+            })
+        }
+    } catch (err) {
+        console.error(err);
+    }
+});
+
+
+client.on("messageDelete", async (msg) => {
+    try {
+        if (!msg.embeds[0]) return;
+        if (!msg.embeds[0].footer) return;
+        if (msg.embeds[0].footer.text !== "MatsumotoChecker") return;
+        msg.channel.send(msg);
+    } catch (err) {
+        console.error(err);
+    }
+});
